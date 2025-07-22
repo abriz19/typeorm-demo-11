@@ -14,4 +14,9 @@ export class AuthService {
     const user = this.userRepository.create(createUserDto);
     return await this.userRepository.save(user);
   }
+
+  async findAllUsers() {
+    const users = await this.userRepository.findAndCount();
+    return users;
+  }
 }
