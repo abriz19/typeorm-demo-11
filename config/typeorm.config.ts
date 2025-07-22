@@ -1,5 +1,4 @@
 import 'reflect-metadata';
-import { User } from 'src/auth/entities/user.entity';
 import { DataSource, DataSourceOptions } from 'typeorm';
 import * as dotenv from 'dotenv';
 dotenv.config();
@@ -15,6 +14,7 @@ export const commonConfig: DataSourceOptions = {
   logging: true,
   entities: ['dist/**/*.entity.js'],
   migrations: ['dist/migrations/*.js'],
+  // ssl: true,
 };
 
 export const typeOrmConfig = commonConfig;
